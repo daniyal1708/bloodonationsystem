@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Donation System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Blood Donation System</h1>
+      <p>Manage donors, requests, inventory, and compatibility through a modern web dashboard.</p>
+      <div class="button-row">
+        <button data-target="dashboard">Dashboard</button>
+        <button data-target="donors">Donors</button>
+        <button data-target="requests">Requests</button>
+        <button data-target="history">History</button>
+        <button data-target="stock">Stock</button>
+        <button data-target="banks">Banks</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="messageBox" class="message-box"></div>
+
+  <main class="container">
+    <section id="dashboard" class="panel active">
+      <h2>Overview</h2>
+      <div class="cards" id="summaryCards"></div>
+    </section>
+
+    <section id="donors" class="panel">
+      <h2>Donor Management</h2>
+      <form id="donorForm" class="grid-form">
+        <input type="text" id="donorName" placeholder="Name" required />
+        <input type="number" id="donorAge" placeholder="Age" min="18" max="65" required />
+        <select id="donorBlood" required>
+          <option value="">Select Blood Group</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
+        <input type="text" id="donorCity" placeholder="City" required />
+        <input type="text" id="donorContact" placeholder="Contact" required />
+        <input type="text" id="donorCnic" placeholder="CNIC (e.g., 12345-1234567-1)" required />
+        <input type="date" id="donorDate" required />
+        <input type="text" id="donorDisease" placeholder="Donor health condition (if any)" />
+        <button type="submit">Add Donor</button>
+      </form>
+      <div class="panel-actions">
+        <input type="search" id="donorSearch" placeholder="Search by name or CNIC" />
+        <button id="loadDonors">Load Donors</button>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Name</th><th>Age</th><th>Blood Group</th><th>City</th><th>Contact</th><th>CNIC</th><th>Last Donation</th><th>Condition</th><th>Delete</th></tr>
+          </thead>
+          <tbody id="donorTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="requests" class="panel">
+      <h2>Request Management</h2>
+      <form id="requestForm" class="grid-form">
+        <input type="text" id="requestPatient" placeholder="Patient Name" required />
+        <input type="text" id="requestBlood" placeholder="Blood Group" required />
+        <input type="number" id="requestUnits" placeholder="Units Needed" min="1" required />
+        <select id="requestHospital" required>
+          <option value="">Select Hospital</option>
+        </select>
+        <input type="text" id="requestPatientHealth" placeholder="Patient health condition" />
+        <button type="submit">Create Request</button>
+        <button type="button" id="processRequest">Process Next Request</button>
+      </form>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Patient</th><th>Blood Group</th><th>Units</th><th>Hospital</th><th>Condition</th><th>Created At</th></tr>
+          </thead>
+          <tbody id="requestTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="history" class="panel">
+      <h2>Donation History</h2>
+      <form id="historyForm" class="grid-form">
+        <input type="text" id="historyDonor" placeholder="Donor Name" required />
+        <input type="text" id="historyCnic" placeholder="Donor CNIC" required />
+        <select id="historyBlood" required>
+          <option value="">Select Blood Group</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
+        <input type="date" id="historyDate" required />
+        <button type="submit">Record Donation</button>
+      </form>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Donor</th><th>CNIC</th><th>Blood Group</th><th>Date</th></tr>
+          </thead>
+          <tbody id="historyTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="stock" class="panel">
+      <h2>Blood Stock</h2>
+      <div class="grid-form">
+        <select id="stockGroup">
+          <option value="">Select Blood Group</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
+        <button id="updateStock">Update Stock</button>
+        <button id="compatibilityCheck">Check Compatibility</button>
+      </div>
+      <div id="compatibleResult" class="info-box"></div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Blood Group</th><th>Units Available</th></tr>
+          </thead>
+          <tbody id="stockTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="banks" class="panel">
+      <h2>Blood Bank Network</h2>
+      <div class="grid-form">
+        <select id="currentBank">
+          <option value="">Select a Rawalpindi bank</option>
+        </select>
+        <button id="findClosest">Find Closest Bank</button>
+      </div>
+      <div id="closestBankResult" class="info-box"></div>
+      <div class="info-box" id="bankInfoBox">
+        Select a bank to see the nearest Rawalpindi blood bank and route distance.
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Bank Name</th></tr></thead>
+          <tbody id="bankTable"></tbody>
+        </table>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Route</th><th>Distance (km)</th></tr></thead>
+          <tbody id="routeTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Built with Node.js, Express, and vanilla HTML/CSS/JS.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

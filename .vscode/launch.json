@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Blood Donation Web App",
+      "program": "${workspaceFolder}/webapp/server.js",
+      "cwd": "${workspaceFolder}/webapp",
+      "runtimeExecutable": "node",
+      "console": "integratedTerminal",
+      "env": {
+        "PORT": "3000"
+      }
+    }
+  ]
+}

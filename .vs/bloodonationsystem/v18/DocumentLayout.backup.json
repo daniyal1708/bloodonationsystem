@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\khusr\\OneDrive\\Desktop\\bloodonationsystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B760EE1A-C8EF-4560-87E1-8D7D5A8541D7}|bloodonationsystem\\bloodonationsystem.vcxproj|C:\\Users\\khusr\\OneDrive\\Desktop\\bloodonationsystem\\bloodonationsystem\\BloodDonation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B760EE1A-C8EF-4560-87E1-8D7D5A8541D7}|bloodonationsystem\\bloodonationsystem.vcxproj|solutionrelative:bloodonationsystem\\BloodDonation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B760EE1A-C8EF-4560-87E1-8D7D5A8541D7}|bloodonationsystem\\bloodonationsystem.vcxproj|C:\\Users\\khusr\\OneDrive\\Desktop\\bloodonationsystem\\bloodonationsystem\\BloodDonation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B760EE1A-C8EF-4560-87E1-8D7D5A8541D7}|bloodonationsystem\\bloodonationsystem.vcxproj|solutionrelative:bloodonationsystem\\BloodDonation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BloodDonation.cpp",
+              "DocumentMoniker": "C:\\Users\\khusr\\OneDrive\\Desktop\\bloodonationsystem\\bloodonationsystem\\BloodDonation.cpp",
+              "RelativeDocumentMoniker": "bloodonationsystem\\BloodDonation.cpp",
+              "ToolTip": "C:\\Users\\khusr\\OneDrive\\Desktop\\bloodonationsystem\\bloodonationsystem\\BloodDonation.cpp",
+              "RelativeToolTip": "bloodonationsystem\\BloodDonation.cpp",
+              "ViewState": "AgIAAFcDAAAAAAAAAAAAANwBAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-18T20:43:15.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BloodDonation.h",
+              "DocumentMoniker": "C:\\Users\\khusr\\OneDrive\\Desktop\\bloodonationsystem\\bloodonationsystem\\BloodDonation.h",
+              "RelativeDocumentMoniker": "bloodonationsystem\\BloodDonation.h",
+              "ToolTip": "C:\\Users\\khusr\\OneDrive\\Desktop\\bloodonationsystem\\bloodonationsystem\\BloodDonation.h",
+              "RelativeToolTip": "bloodonationsystem\\BloodDonation.h",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAmwJEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-18T20:43:16.093Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

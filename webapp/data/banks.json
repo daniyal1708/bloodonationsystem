@@ -1,0 +1,29 @@
+{
+  "banks": [
+    {
+      "name": "Rawalpindi General Hospital Blood Bank",
+      "lat": 33.5974,
+      "lng": 73.0548
+    },
+    {
+      "name": "Holy Family Hospital Rawalpindi Blood Bank",
+      "lat": 33.5786,
+      "lng": 73.0500
+    },
+    {
+      "name": "Al-Shifa Trust Hospital Rawalpindi Blood Bank",
+      "lat": 33.6140,
+      "lng": 73.0616
+    },
+    {
+      "name": "District Headquarters Hospital Blood Bank",
+      "lat": 33.6180,
+      "lng": 73.0440
+    },
+    {
+      "name": "Benazir Bhutto Hospital Blood Bank",
+      "lat": 33.6320,
+      "lng": 73.0300
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "adminpass",
+      "role": "admin"
+    },
+    {
+      "username": "user",
+      "password": "userpass",
+      "role": "patient",
+      "cnic": "12345-1234567-1"
+    }
+  ]
+}
